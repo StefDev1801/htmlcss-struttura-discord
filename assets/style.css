@@ -1,4 +1,6 @@
-/* TODO: dividi la regione commenti css
+/* 
+La prima regione non posso chiamarla section ma solo div, dopo section è ok
+dai un senso a quelle classi che vedi non big rectangle o ste sstronzate
 */
 
 /* #region common*/
@@ -7,22 +9,34 @@
 }
 *{
     margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    /* puoi anche dargli un border: 1px dashed bleck; per fare dubug */
+    border: 1px dashed black;
 }
 /* #endregion */
 
 /* #region utilities */
+.d-flex{
+    /* sta per display flex, posso usarlo nell'html evitando di scrivere su css */
+}
 /* #endregion */
 
 
+/* #region debug */
+/* #endregion */
 
 
 
 /* #region header */
 header.debug{
     height: 100px;
+}
+header{
     display: flex;
     justify-content: center;
 }
+/* margin auto???? */
 .site_nav{
     height:100px;
     width: 500px;
@@ -32,18 +46,20 @@ header.debug{
 }
 .item_logo{
     background-color: rebeccapurple;
-    width: 25%;
-
+    /* width: 25%; */
+    flex-grow: 1;
 }
 .item_link{
     text-align: center;
     background-color: brown;
-    width: 50%;
-
+    /* width: 50%; */
+    flex-grow: 3;
 }
 .item_login{
     background-color: rebeccapurple;
-    width: 25%;
+    /* width: 25%; */
+    flex-grow: 1;
+    text-align: right;
 }
 
 
@@ -96,7 +112,7 @@ main{
     flex-direction: row-reverse;
 }
 
-/* Big green triangle: main height bigger */
+/* Big green rectangle: main height bigger */
 .taller.debug{
     background-color: rgb(109, 106, 106);
     height: 500px;
@@ -105,36 +121,21 @@ main{
     background-color: green;
     width: 500px;
 }
-/* robo diviso in 4 */
-.debug.robo{
-    display: flex;
-    justify-content: center;
-}
-.robo{
-    height: 400px;
-}
-.robo_interno{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.item_robo.debug{
-    background-color: aqua;
-    width: 20%;
-    height: 80%;
-}
-.item_robo_piccolo.debug{
-    background-color: pink;
-    width: 17.5%;
-    height: 80%;
-}
-
-
 /* #endregion */
 
 
 
 /* #region footer */
+
+.footer_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 footer.debug{
     background-color: orange;
     height: 100px;
