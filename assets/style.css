@@ -1,169 +1,141 @@
-/* 
-La prima regione non posso chiamarla section ma solo div, dopo section è ok
-dai un senso a quelle classi che vedi non big rectangle o ste sstronzate
-*/
-
-/* #region common*/
-:root{
-    --disc-bg-header:#FFFFFF
-}
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    /* puoi anche dargli un border: 1px dashed bleck; per fare dubug */
-    border: 1px dashed black;
+    font-family: 'Inter', sans-serif;
 }
-/* #endregion */
-
-/* #region utilities */
-.d-flex{
-    /* sta per display flex, posso usarlo nell'html evitando di scrivere su css */
+:root{
+    --discord-bg-header:#3161e0;
+    --discord-bg-dark: #23272a;
+    --discord--bg-lightgray:#f6f6f6;
+    --discord-buttons-lightblue:#8ea1e1;
+    --discord-hr:#313849;
 }
-/* #endregion */
 
+/* #region header*/
+.site_nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--discord-bg-header);
+}
+.img-logo{
+    height: 50px;
+    width: 100px;
+}
+.main_menu{
+    list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem
 
-/* #region debug */
-/* #endregion */
-
-
-
-/* #region header */
-header.debug{
-    height: 100px;
 }
 header{
-    display: flex;
-    justify-content: center;
+    color: white;
 }
-/* margin auto???? */
-.site_nav{
-    height:100px;
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.accedi{
+    padding: 0.7rem;
+    border-radius: 20px;
 }
-.item_logo{
-    background-color: rebeccapurple;
-    /* width: 25%; */
-    flex-grow: 1;
-}
-.item_link{
-    text-align: center;
-    background-color: brown;
-    /* width: 50%; */
-    flex-grow: 3;
-}
-.item_login{
-    background-color: rebeccapurple;
-    /* width: 25%; */
-    flex-grow: 1;
-    text-align: right;
-}
-
-
-
-/* #endregion */
-
-
-/* #region Main */
-main.debug{
-    background-color: red;
-    height: 300px;
-}
-main{
+/* start jumbotron */
+.jumbotron{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.first_main.debug{
-    background-color: green;
-    width: 50%;
-    height: 80%;
-}
-
-
-/*start samething  */
-.container_container_samething.debug{
-    display: flex;
-    justify-content: center;
-}
-.container_samething.debug{
-    height: 400px;
-    width: 500px;
-}
-.container_samething{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.aqua_rectangle.debug{
-    background-color: aqua;
-    width: 60%;
-    height: 80%;
-}
-.pink_rectangle.debug{
-    background-color: pink;
-    width: 40%;
-    height: 80%;
-}
-.butrowreverse{
-    flex-direction: row-reverse;
-}
-
-/* Big green rectangle: main height bigger */
-.taller.debug{
-    background-color: rgb(109, 106, 106);
+    background-image: url(./Img/jumbo.png);
     height: 500px;
 }
-.first_main.debug.wider{
-    background-color: green;
+.container-small{
     width: 500px;
+    color: white;
+}
+h1{
+    /* che sarebbe un utilities? */
+    text-align: center;
+}
+.align_buttons{
+    text-align: center;
+}
+.header_paragraph{
+    text-align: center;
+    padding: 1rem;
+}
+.header_button{
+    padding: 0.7rem;
+    border-radius: 20px;
+}
+.black_button{
+    background-color:var(--discord-bg-dark) ;
+    color: white;
 }
 /* #endregion */
-
-
-
-/* #region footer */
-
-.footer_nav{
+/* #region main*/
+.bg_lightgray{
+    background-color: var(--discord--bg-lightgray);
+}
+.d_flex{
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-
-
-
-footer.debug{
-    background-color: orange;
-    height: 100px;
-}
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-.debug.site_container_footer{
-    background-color: darkcyan;
-    height: 80%;
-    width: 80%;
-}
-.site_container_footer{
-    display: flex;
     justify-content: center;
 }
-.debug.container_footer{
-    background-color: brown;
+.row_reverse{
+    flex-direction: row-reverse;
+}
+.wave{
     width: 100%;
+}
+.gray_wave{
+    background-color: var(--discord--bg-lightgray);
+}
+
+.center-main{
+    /* utilities */
+    width: 1000px;
+    margin: auto;
+}
+
+.just-chillin{
+    background-color: var(--discord--bg-lightgray);
+    text-align: center;
+}
+
+.main_footer{
+    text-align: center;
+    background-image: url(./Img/stars.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 4rem;
+    background-color: var(--discord--bg-lightgray);
+}
+.main_button{
+    padding: 0.7rem;
+    border-radius: 20px;
+    background-color:var(--discord-buttons-lightblue);
+    color: white;
+}
+/* #endregion */
+/* #region footer*/
+footer{
+    background-color: #23272a;
+    padding: 2rem;
 }
 .container_footer{
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
-.debug.item_footer{
-    background-color: bisque;
+.italian_flag{
+    height: 1rem;
+    align-self: flex-start;
+}
+.text_color_blue{
+    color: var(--discord-buttons-lightblue);
+}
+
+.img-registr{
+    display: flex;
+    justify-content: space-between;
+}
+hr{
+    color: var(--discord-hr);
 }
 /* #endregion */
